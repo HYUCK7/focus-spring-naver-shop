@@ -11,5 +11,5 @@ package com.hyuckweb.api.member.repository;
  * ================================
  * 2022-02-11         HYUCK7         최초 생성
  */
-public interface MemberRepository {
+public interface MemberRepository{
 }

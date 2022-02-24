@@ -1,16 +1,19 @@
 package com.hyuckweb.api.member.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * packageName: com.hyuckweb.api.member.service
  * fileName   : MemberServiceImpl
  * author     : HYUCK7
- * date       : 2022-02-11
+ * date       : 2022-02-14
  * desc       :
  * ================================
  * DATE            AUTHOR         NOTE
  * ================================
- * 2022-02-11         HYUCK7         최초 생성
+ * 2022-02-14         HYUCK7         최초 생성
  */
+@Service
 public class MemberServiceImpl implements MemberService{
     @Override
     public String memberList() {
@@ -49,6 +52,21 @@ public class MemberServiceImpl implements MemberService{
 
     @Override
     public String delete() {
+        return null;
+    }
+
+    @Override
+    public String calc() {
+        return null;
+    }
+
+    @Override
+    public String bmi() {
+        return null;
+    }
+
+    @Override
+    public String grade() {
         return null;
     }
 }

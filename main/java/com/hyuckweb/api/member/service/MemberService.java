@@ -20,5 +20,8 @@ public interface MemberService {
     String checkSavings();
     String save();
     String delete();
+    String calc();
+    String bmi();
+    String grade();
 
 }
