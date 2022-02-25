@@ -1,5 +1,8 @@
 package com.hyuckweb.api.member.service;
 
+import com.hyuckweb.api.member.domain.CalcDTO;
+import com.hyuckweb.api.member.domain.MemberDTO;
+
 /**
  * packageName: com.hyuckweb.api.member.service
  * fileName   : MemberService
@@ -12,16 +15,8 @@ package com.hyuckweb.api.member.service;
  * 2022-02-11         HYUCK7         최초 생성
  */
 public interface MemberService {
-    String memberList();
-    String memberInfo();
-    String checkList();
-    String regSendEmail();
-    String SaveMoneyList();
-    String checkSavings();
-    String save();
-    String delete();
-    String calc();
-    String bmi();
-    String grade();
 
+    String calc(CalcDTO calc);
+
+    String member(MemberDTO member);
 }

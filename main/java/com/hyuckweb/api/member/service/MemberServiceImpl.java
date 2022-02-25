@@ -1,5 +1,9 @@
 package com.hyuckweb.api.member.service;
 
+import com.hyuckweb.api.member.domain.CalcDTO;
+import com.hyuckweb.api.member.domain.MemberDTO;
+import com.hyuckweb.api.member.repository.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,59 +18,28 @@ import org.springframework.stereotype.Service;
  * 2022-02-14         HYUCK7         최초 생성
  */
 @Service
+@RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
+    private final MemberRepository repository;
+
     @Override
-    public String memberList() {
-        return null;
+    public String calc(CalcDTO calc) {
+        int a = calc.getNum1();
+        int b = calc.getNum2();
+        int res = 0;
+        switch (calc.getOpcode()){
+            case "+": res = a+b; break;
+            case "-": res = a-b; break;
+            case "*": res = a*b; break;
+            case "/": res = a/b; break;
+            case "%": res = a%b; break;
+        }
+        return String.format("%d %s %d = %d",a,calc.getOpcode(),b,res);
     }
 
     @Override
-    public String memberInfo() {
-        return null;
+    public String member(MemberDTO member) {
+        return repository.member(member);
     }
 
-    @Override
-    public String checkList() {
-        return null;
-    }
-
-    @Override
-    public String regSendEmail() {
-        return null;
-    }
-
-    @Override
-    public String SaveMoneyList() {
-        return null;
-    }
-
-    @Override
-    public String checkSavings() {
-        return null;
-    }
-
-    @Override
-    public String save() {
-        return null;
-    }
-
-    @Override
-    public String delete() {
-        return null;
-    }
-
-    @Override
-    public String calc() {
-        return null;
-    }
-
-    @Override
-    public String bmi() {
-        return null;
-    }
-
-    @Override
-    public String grade() {
-        return null;
-    }
 }
